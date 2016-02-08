@@ -1,7 +1,7 @@
 #!/bin/bash
 echo 'Initializing bootstrap script'
 
-python -m bootstrap.py
+python -m bootstrap | sudo bash
 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
 
@@ -9,7 +9,7 @@ nvm use v5.5.0
 
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 
-\curl -sSL https://get.rvm.io | bash -s stable --ruby
+\curl -sSL https://get.rvm.io | sudo bash -s stable --ruby
 
 sudo gem install rake
 sudo gem install giternal
