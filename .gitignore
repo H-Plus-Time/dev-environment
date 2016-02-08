@@ -4,3 +4,5 @@ bower_components/
 
 *.pyx
 *.pyo
+
+external/dependencies/awesome-terminal-fonts
