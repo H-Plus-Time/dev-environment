@@ -1,0 +1,46 @@
+{
+  "name": "dev-interface",
+  "authors": [
+    "Nicholas Roberts <Nicholas.Roberts.au@gmail.com>"
+  ],
+  "description": "Barebones system for displaying prototype presentations and various programming experiments",
+  "main": "",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "keywords": [
+    "graph",
+    "genomics"
+  ],
+  "license": "GPLv3",
+  "homepage": "https://bitbucket.org/NRoberts42/dev_environment/wiki",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bower": "*",
+    "clipboard": "~1.5.5",
+    "d3": "~3.5.11",
+    "font-awesome": "~4.4.0",
+    "mathjs": "~2.0.0",
+    "modernizr": "~3.2.0",
+    "sigma": "~1.0.3",
+    "nvd3": "~1.8.1",
+    "resumable.js": "~2.10.0",
+    "underscore": "~1.8.3",
+    "reveal.js": "~2.6.0",
+    "iron-elements": "PolymerElements/iron-elements#^1.0.8",
+    "paper-elements": "PolymerElements/paper-elements#^1.0.7",
+    "vaadin-core-elements": "^0.3.0"
+  },
+  "resolutions": {
+    "vaadin-grid": "~1.0.0",
+    "polymer": "^1.2.4"
+  }
+}
