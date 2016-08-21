@@ -57,11 +57,11 @@ curl https://getcaddy.com | zsh
 
 # Git extras
 wget https://github.com/github/hub/releases/download/v2.2.5/hub-linux-amd64-2.2.5.tgz -O hub.tgz
-tar -xvf hub.tgz && sudo ./hub/install
+tar -xvf hub.tgz && sudo zsh ./hub/install
 
 # Golang
 wget https://storage.googleapis.com/golang/go1.7.linux-amd64.tar.gz -O go.tar.gz
-tar -C /usr/local -xvf go.tar.gz
+sudo tar -C /usr/local -xvf go.tar.gz
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc
 echo 'export GOPATH=$HOME/goprojects' >> ~/.zshrc
 echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.zshrc
