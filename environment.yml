@@ -1,0 +1,10 @@
+name: dev-base
+dependencies:
+  - python=3.5
+  - ujson
+  - cryptography
+  - pip:
+    - autoenv
+    - dataset
+    - records
+    - legit
