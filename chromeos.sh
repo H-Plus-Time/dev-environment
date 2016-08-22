@@ -10,11 +10,11 @@ rm -r materialshell
 echo 'ZSH_THEME="materialdesigndark"' >> ~/.zshrc
 
 ## grab vim, zsh, compilers
-sudo apt-get install -y vim git curl clang unzip wget entr
+sudo apt-get install -y vim git curl clang unzip wget entr libzmq3-dev
 
 ## Install rvm, rake, ruby, gem
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-\curl -sSL https://get.rvm.io | bash -s stable --autolibs=enabled --ruby
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
 source ~/.zshrc
 source $HOME/.rvm/scripts/rvm
 
