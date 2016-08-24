@@ -84,6 +84,7 @@ apm install sync-settings
 ## HyperTerm extras
 npm install -g hpm-cli
 hpm install hyperterm-materialshell
+sh ./composer-install.sh
 
 # Cleanup
 rm miniconda3.sh
