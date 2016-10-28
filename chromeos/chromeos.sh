@@ -47,7 +47,7 @@ zsh ./miniconda3.sh -b -p $HOME/miniconda3
 echo 'export PATH="$HOME/miniconda3/bin:$PATH"' >> ~/.zshrc
 #Update working env with changes to .zshrc file
 source ~/.zshrc
-conda env create -f environment.yml
+conda env update -f envs/base.yml
 
 echo 'source activate dev-base' >> ~/.zshrc
 echo 'source `which activate.sh`' >> ~/.zshrc
