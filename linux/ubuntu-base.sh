@@ -10,7 +10,7 @@ rm -r materialshell
 echo 'ZSH_THEME="materialdesigndark"' >> ~/.zshrc
 
 ## grab vim, zsh, compilers
-yes | sudo pacapt vim git curl clang unzip wget entr libzmq3-dev
+yes | sudo pacapt -S vim git curl clang unzip wget entr libzmq3-dev
 
 ## Install rvm, rake, ruby, gem
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
