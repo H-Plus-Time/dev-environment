@@ -4,10 +4,6 @@ channels:
   - conda-forge
 dependencies:
   - python=3.5
-  - mkl
-  - cryptography
+  - anaconda
   - pip:
     - autoenv
-    - dataset
-    - records
-    - legit
