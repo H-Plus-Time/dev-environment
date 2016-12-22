@@ -5,6 +5,10 @@ conda env update -f envs/full.yml
 source ~/.zshrc
 apm install sync-settings
 
+sudo add-apt-repository ppa:saltstack/salt
+sudo apt-get update
+sudo apt-get -y install salt-minion
+
 # 1. Add the Spotify repository signing key to be able to verify downloaded packages
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
 
