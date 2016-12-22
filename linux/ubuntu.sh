@@ -1,3 +1,4 @@
+sudo apt-get -y install snapd
 sudo snap install docker atom-cwayne darktable-kyrofa vlc telegram-latest
 conda env update -f envs/full.yml
 ## Atom extras
@@ -25,8 +26,37 @@ sudo apt-get update
 sudo apt-get install google-chrome-stable google-chrome-beta google-chrome-unstable
 
 sudo apt-get install redshift
-wget https://go.microsoft.com/fwlink/?LinkID=760868 -O code.deb
-sudo apt-get install -fy code.deb
+wget -O code.deb https://go.microsoft.com/fwlink/?LinkID=760868
+sudo dpkg -i code.deb
+sudo apt-get install -fy
+rm code.deb
 
-wget https://resin-production-downloads.s3.amazonaws.com/etcher/1.0.0-beta.17/Etcher-1.0.0-beta.17-linux-x64.zip -O Etcher.zip
-unzip Etcher.zip
+wget -O Etcher.ziphttps://resin-production-downloads.s3.amazonaws.com/etcher/1.0.0-beta.17/Etcher-1.0.0-beta.17-linux-x64.zip
+unzip Etcher.zip && yes | ./Etcher-linux-x64.AppImage install
+rm Etcher.zip Etcher-linux-x64.AppImage
+
+wget -O slack.deb https://downloads.slack-edge.com/linux_releases/slack-desktop-2.3.4-amd64.deb
+sudo dpkg -i slack.deb
+sudo apt-get install -fy
+rm slack.deb
+
+sudo add-apt-repository ppa:peterlevi/ppa
+sudo apt-get update
+sudo apt-get install -y variety
+
+sudo apt-get install -y cups-pdf virtualbox parallel openssh-server
+sudo apt-get install -y djvu2pdf htop iotop
+
+sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ yakkety main" > /etc/apt/sources.list.d/dotnetdev.list'
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
+sudo apt-get update
+sudo apt-get install -y dotnet-dev-1.0.0-preview2.1-003177
+docker pull microsoft/dotnet:latest
+
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+
+sudo apt-cache search nvidia
+# install latest version here
+wget -O cuda.run https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda_8.0.44_linux-run
+sudoo sh cuda.run

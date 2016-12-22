@@ -57,7 +57,7 @@ echo 'source `which activate.sh`' >> ~/.zshrc
 curl https://getcaddy.com | zsh
 
 # Git extras
-wget https://github.com/github/hub/releases/download/v2.2.9/hub-linux-amd64-2.2.9.tgz -O hub.tgz
+wget -O hub.tgz https://github.com/github/hub/releases/download/v2.2.9/hub-linux-amd64-2.2.9.tgz
 tar -xvf hub.tgz && sudo zsh ./hub/install
 
 # Golang

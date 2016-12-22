@@ -6,6 +6,7 @@ dependencies:
   - python=3.5
   - mkl
   - cryptography
+  - jupyterlab
   - pip:
     - autoenv
     - dataset
