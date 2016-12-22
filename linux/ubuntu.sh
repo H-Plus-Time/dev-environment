@@ -27,3 +27,6 @@ sudo apt-get install google-chrome-stable google-chrome-beta google-chrome-unsta
 sudo apt-get install redshift
 wget https://go.microsoft.com/fwlink/?LinkID=760868 -O code.deb
 sudo apt-get install -fy code.deb
+
+wget https://resin-production-downloads.s3.amazonaws.com/etcher/1.0.0-beta.17/Etcher-1.0.0-beta.17-linux-x64.zip -O Etcher.zip
+unzip Etcher.zip

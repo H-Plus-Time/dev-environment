@@ -84,4 +84,3 @@ hpm install hyperterm-materialshell
 rm hub.tgz
 rm hyperterm.deb
 sudo rm -r /var/cache/apt/archives/*
-echo 'check that janus finished installing, delete nohup.out'
