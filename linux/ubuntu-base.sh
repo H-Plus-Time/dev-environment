@@ -53,6 +53,12 @@ conda env create -f envs/py27.yml
 
 echo 'source `which activate.sh`' >> ~/.zshrc
 
+# VSCode install
+wget -O code.deb https://go.microsoft.com/fwlink/?LinkID=760868
+sudo dpkg -i code.deb
+sudo apt-get install -fy
+rm code.deb
+
 ## caddy
 curl https://getcaddy.com | zsh
 

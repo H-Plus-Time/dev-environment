@@ -1,9 +1,15 @@
-sudo apt-get -y install snapd
-sudo snap install docker atom-cwayne darktable-kyrofa vlc telegram-latest
+#!/bin/zsh
+# sudo apt-get -y install snapd
+
+. $HOME/.zshrc
+# Chrome
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo apt-get update
+sudo apt-get install -y google-chrome-stable google-chrome-beta google-chrome-unstable
+
+# sudo snap install docker darktable-kyrofa vlc telegram-latest
 conda env update -f envs/full.yml
-## Atom extras
-source ~/.zshrc
-apm install sync-settings
 
 sudo add-apt-repository ppa:saltstack/salt
 sudo apt-get update
@@ -19,21 +25,12 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 sudo apt-get update
 
 # 4. Install Spotify
-sudo apt-get install spotify-client
+sudo apt-get -y install spotify-client
 
-sudo apt-get install arc-theme unity-tweak-tool
+sudo apt-get -y install arc-theme unity-tweak-tool
 
-# Chrome
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo apt-get update
-sudo apt-get install google-chrome-stable google-chrome-beta google-chrome-unstable
+sudo apt-get -y install redshift docker
 
-sudo apt-get install redshift
-wget -O code.deb https://go.microsoft.com/fwlink/?LinkID=760868
-sudo dpkg -i code.deb
-sudo apt-get install -fy
-rm code.deb
 
 wget -O Etcher.ziphttps://resin-production-downloads.s3.amazonaws.com/etcher/1.0.0-beta.17/Etcher-1.0.0-beta.17-linux-x64.zip
 unzip Etcher.zip && yes | ./Etcher-linux-x64.AppImage install
@@ -56,11 +53,3 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
 sudo apt-get update
 sudo apt-get install -y dotnet-dev-1.0.0-preview2.1-003177
 docker pull microsoft/dotnet:latest
-
-sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt update
-
-sudo apt-cache search nvidia
-# install latest version here
-wget -O cuda.run https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda_8.0.44_linux-run
-sudoo sh cuda.run
