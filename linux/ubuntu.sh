@@ -29,7 +29,9 @@ sudo apt-get -y install spotify-client
 
 sudo apt-get -y install arc-theme unity-tweak-tool
 
-sudo apt-get -y install redshift docker
+sudo apt-get -y install redshift redshift-gtk
+
+sudo curl -sSL https://get.docker.com/ | sh
 
 
 wget -O Etcher.ziphttps://resin-production-downloads.s3.amazonaws.com/etcher/1.0.0-beta.17/Etcher-1.0.0-beta.17-linux-x64.zip
