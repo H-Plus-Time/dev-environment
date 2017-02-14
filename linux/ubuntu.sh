@@ -1,5 +1,4 @@
 #!/bin/zsh
-# sudo apt-get -y install snapd
 
 . $HOME/.zshrc
 # Chrome

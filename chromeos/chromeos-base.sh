@@ -1,1 +1,0 @@
-../linux/ubuntu-base.sh
