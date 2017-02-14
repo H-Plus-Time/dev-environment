@@ -15,7 +15,7 @@ yes | sudo pacapt -S software-properties-common
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo apt-get update
 echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
-yes | pacapt -S oracle-java8-installer
+yes | sudo pacapt -S oracle-java8-installer
 
 ## grab nodejs niceties
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | zsh
