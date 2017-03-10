@@ -25,6 +25,7 @@ export NVM_DIR="/home/nicholas/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 if [ $(arch) == 'aarch64']
 then
+    sudo dpkg --add-architecture armhf
     function nvm_get_arch { echo 'armv7l'; }
     nvm install node
 else
@@ -66,16 +67,16 @@ then
     text="${s4}${s8}if m == 'aarch64':"
     text_p2="${s8}${s8}return armv7l"
     sed -ie "s#${replace_text}#${replace_text}\n${text}\n${text_p2}#g" \
-        ./context.py
+        $HOME/miniconda3/lib/python3.4/site-packages/conda/config.py
 
     # Always access m via the modified arch_name func
     replace_text="${s4}${s8}return 'linux-%s' % m"
     text="return 'linux-%s' % self.arch_name"
     sed -ie "s#${replace_text}#${s8}${s4}${text}#g" \
-        ./context.py
+        $HOME/miniconda3/lib/python3.4/site-packages/conda/config.py
     # Add aarch64 to the list of non_x86_linux_machines arches
     sed -ie "s#non_x86_linux_machines = {#non_x86_linux_machines = {\n${s4}'aarch64',#g" \
-        ./context.py
+        $HOME/miniconda3/lib/python3.4/site-packages/conda/config.py
 fi
 
 #Update working env with changes to .zshrc file
