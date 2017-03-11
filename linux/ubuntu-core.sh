@@ -25,8 +25,7 @@ export NVM_DIR="/home/nicholas/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 if [ $(arch) == 'aarch64']
 then
-    sudo dpkg --add-architecture armhf
-    function nvm_get_arch { echo 'armv7l'; }
+    yes | sudo pacapt -S weston
     nvm install node
 else
     nvm install node
