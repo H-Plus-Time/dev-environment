@@ -1,9 +1,10 @@
-miniconda:
+condarc:
   file.managed:
     - user: nicholas
     - group: nicholas
     - source: salt://.condarc
     - name: /home/nicholas/.condarc
+miniconda:
   file.managed:
     - user: nicholas
     - group: nicholas

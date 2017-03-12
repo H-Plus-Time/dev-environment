@@ -1,4 +1,9 @@
 base:
+  pkg.installed:
+    - pkgs:
+      - python-software-properties
+      - software-properties-common
+      - debconf-utils
   pkgrepo.managed:
     - ppa: webupd8team/java
   debconf.set:
@@ -24,16 +29,22 @@ common_packages:
       - python-software-properties
       - debconf-utils
       - software-properties-common
-      - gccgo
+nvm:
+  cmd.run:
+    - runas: nicholas
+    - name: curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | zsh
+    - creates: {{ salt.cmd.run('echo $HOME') }}/.nvm
 us_locale:
   locale.present:
     - name: en_US.UTF-8
 
+create-default-locale:
+  cmd.run:
+    - name: touch /etc/default/locale
+    - unless: test -f /etc/default/locale
 default_locale:
   locale.system:
     - name: en_US.UTF-8
-    - require:
-      - locale: us_locale
 nicholas:
   user.present:
     - shell: /bin/zsh
