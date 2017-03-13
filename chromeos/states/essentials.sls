@@ -16,12 +16,15 @@ common_packages:
       - dos2unix
       - zsh
       - git
+      - weston
       - curl
       - vim
       - python
       - wget
       - unzip
       - entr
+      - gcc
+      - g++
       - libzmq3-dev
       - clang
       - exuberant-ctags
