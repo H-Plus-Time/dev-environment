@@ -24,6 +24,7 @@ common_packages:
       - unzip
       - entr
       - gcc
+      - cmake
       - g++
       - libzmq3-dev
       - clang

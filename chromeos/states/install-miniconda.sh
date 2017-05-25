@@ -29,7 +29,7 @@ then
     s8="        "
     # Correct arch_name
     text="${s4}${s8}if m == 'aarch64':"
-    text_p2="${s8}${s8}return armv7l"
+    text_p2="${s8}${s8}return 'armv7l'"
     sed -ie "s#${replace_text}#${replace_text}\n${text}\n${text_p2}#g" \
         $HOME/miniconda3/lib/python3.6/site-packages/conda/base/context.py
 
