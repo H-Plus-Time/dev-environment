@@ -6,7 +6,10 @@ export NVM_DIR="$HOME/.nvm"
 
 nvm install node
 
-go get github.com/github/hub
+wget -O hub.tgz https://github.com/github/hub/releases/download/v2.3.0-pre9/hub-linux-amd64-2.3.0-pre9.tgz
+tar -xf hub.tgz && sudo mv hub/bin/hub /usr/local/bin
+rm hub.tgz && rm -r hub
+
 git clone https://github.com/zplug/zplug $HOME/.zplug
 
 curl https://glide.sh/get | sh
